@@ -9,13 +9,29 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #f0f0f0;
+        background-color: #d821d8;
       }
     </style>
   </head>
   <body>
-    <div id="container"></div>
+    <div id = "container"></div>
     <script>
-        </Script>
-            </body>
-             </html>
+      var stage = new Konva.Stage({
+        container:'container',
+        width: 578,
+        height: 530
+      });
+      var background = new Konva.Layer();
+      strage.add(background)
+      
+      var bkimage = new Image();
+      bkimage.src = 'assets/beach.png';
+    
+      bkimage.onload = function(){
+      
+        var context = background.getContext()
+        context.drawImage(bkimage,0,0);
+      };
+    </script>
+  </body>
+  </html>
